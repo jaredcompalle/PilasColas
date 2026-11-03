@@ -1,0 +1,119 @@
+GUION DEL VIDEO - TAREA 3.1: PILAS Y COLAS ESTATICAS
+Alumno: Rosembert Jared Ortiz Reyes | Matricula: I25050406
+Escuela: TECNM | Maestro: Ruben Riojas | Fecha: 2 de noviembre de 2026
+
+ANTES DE GRABAR
+- Camara web visible en la esquina inferior derecha de la pantalla.
+- Abre el programa (F5 en Visual Studio) y ten abierto tu repositorio de GitHub.
+- Sube el video a tu canal de YouTube como PUBLICO (todos tus videos en el mismo canal).
+- Tiempo recomendado: 6 a 8 minutos. Habla con calma.
+
+------------------------------------------------------------
+1. INTRODUCCION (30 seg)
+------------------------------------------------------------
+PANTALLA: Programa abierto, pestana de Pila.
+DECIR:
+"Hola, soy Rosembert Jared Ortiz Reyes, matricula I25050406, del TECNM.
+Este es mi video de la Tarea 3.1 de la materia con el maestro Ruben Riojas.
+Les voy a mostrar un programa en C# con Windows Forms que implementa una pila,
+una cola simple y una cola circular, usando arreglos estaticos y sin usar
+colecciones nativas de C#."
+
+------------------------------------------------------------
+2. EXPLICACION RAPIDA DE LAS ESTRUCTURAS (1 min)
+------------------------------------------------------------
+PANTALLA: Sigue en el programa (o muestra el reporte).
+DECIR:
+"Una pila funciona como una pila de platos: el ultimo en entrar es el primero
+en salir. Se llama LIFO. Usa un puntero llamado top.
+Una cola funciona como la fila del banco: el primero en entrar es el primero
+en salir. Se llama FIFO. Usa dos punteros: front, que es el inicio, y rear,
+que es el final.
+La cola circular es igual, pero cuando el final llega al ultimo espacio del
+arreglo, regresa al inicio para reutilizar los espacios libres."
+
+------------------------------------------------------------
+3. DEMOSTRACION DE LA PILA (1.5 min)
+------------------------------------------------------------
+PANTALLA: Pestana "Pila (LIFO)".
+PASOS Y QUE DECIR:
+a) "El tamano del arreglo es 5. Si quiero otro tamano lo cambio aqui y
+   presiono Crear con tamano."
+b) Escribe 10 y presiona Push. Repite con 20 y 30.
+   DECIR: "Cada Push guarda el dato y sube el puntero top. Aqui abajo se ve
+   que top vale 2."
+c) Presiona Peek.
+   DECIR: "Peek me muestra el dato del tope, que es 30, sin sacarlo."
+d) Presiona Pop.
+   DECIR: "Pop saca el ultimo dato que entro, el 30, y baja el top."
+e) Presiona isEmpty e isFull.
+   DECIR: "Estos botones me dicen si la pila esta vacia o llena."
+f) Inserta datos hasta llenarla y presiona Push una vez mas.
+   DECIR: "Aqui sale un error de desbordamiento porque la pila ya esta llena."
+g) Presiona Reiniciar.
+   DECIR: "Reiniciar deja la pila limpia."
+
+------------------------------------------------------------
+4. DEMOSTRACION DE LA COLA SIMPLE (1.5 min)
+------------------------------------------------------------
+PANTALLA: Pestana "Cola simple (FIFO)".
+PASOS Y QUE DECIR:
+a) Inserta A, B y C con Enqueue.
+   DECIR: "Enqueue mete datos al final de la cola. Se ve que rear avanza y
+   front se queda en 0."
+b) Presiona Front.
+   DECIR: "Front me muestra quien esta primero, la A."
+c) Presiona Dequeue.
+   DECIR: "Dequeue saca al primero que llego, la A, y front avanza."
+d) Llena la cola con Enqueue hasta que rear llegue al final.
+   DECIR: "Ahora rear esta en la ultima posicion."
+e) Haz Dequeue dos veces y luego Enqueue.
+   DECIR: "Aunque hay espacios libres al inicio, la cola simple marca error,
+   porque no reutiliza esos espacios. Esta es la limitacion de la cola
+   simple, y por eso existe la cola circular."
+
+------------------------------------------------------------
+5. DEMOSTRACION DE LA COLA CIRCULAR (1.5 min)
+------------------------------------------------------------
+PANTALLA: Pestana "Cola circular (FIFO)".
+PASOS Y QUE DECIR:
+a) Llena la cola con Enqueue (por ejemplo 1, 2, 3, 4, 5).
+b) Haz Dequeue dos veces.
+   DECIR: "Saque dos datos, ahora hay dos espacios libres al inicio."
+c) Haz Enqueue de 6.
+   DECIR: "Ahora si funciona: rear regreso a la posicion 0. Esto lo hace la
+   formula rear igual a rear mas uno, modulo el tamano del arreglo."
+d) Intenta un Enqueue mas cuando este llena.
+   DECIR: "Si esta llena, marca error de desbordamiento. Esta cola usa un
+   contador llamado count para saber cuantos elementos hay."
+
+------------------------------------------------------------
+6. EXPLICACION DEL CODIGO (1 min)
+------------------------------------------------------------
+PANTALLA: Visual Studio, carpeta Estructuras.
+DECIR:
+"En la carpeta Estructuras estan las tres clases: PilaEstatica, ColaSimple y
+ColaCircular. Las tres usan un arreglo normal de strings y sus propios
+punteros, sin List, Stack ni Queue. Todas cumplen una interfaz comun
+llamada IEstructura, y por eso una sola pantalla puede controlar las tres.
+En la carpeta Interfaz esta el formulario principal y el panel. Su diseno se
+puede modificar desde el Disenador de Visual Studio."
+(Muestra rapido el diseñador abriendo MainForm.cs en vista Diseno.)
+
+------------------------------------------------------------
+7. REPOSITORIO Y CIERRE (30 seg)
+------------------------------------------------------------
+PANTALLA: Pagina del repositorio en GitHub.
+DECIR:
+"El codigo fuente esta en mi repositorio de GitHub, con su documentacion y
+capturas de prueba. El enlace esta en la descripcion del video.
+Con esto cumplo con las pilas, la cola simple y la cola circular con memoria
+estatica. Gracias por ver el video, soy Rosembert Jared Ortiz Reyes."
+
+------------------------------------------------------------
+DESCRIPCION SUGERIDA PARA YOUTUBE
+------------------------------------------------------------
+Tarea 3.1 - Pilas y Colas con arreglos estaticos en C# (Windows Forms)
+Alumno: Rosembert Jared Ortiz Reyes - I25050406 - TECNM
+Maestro: Ruben Riojas
+Repositorio: (pega aqui tu enlace de GitHub)
